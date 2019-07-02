@@ -25,6 +25,12 @@ public interface ConfigurationInterface extends Remote {
 
     public String getHostname() throws java.rmi.RemoteException;
 
+    public boolean checkPort(int port) throws java.rmi.RemoteException;
+
+    public boolean checkNeighbor(InetAddress neghip, String neighname) throws java.rmi.RemoteException;
+
+    public boolean checkEstablishedNeighbor(InetAddress neghip, String neighname) throws java.rmi.RemoteException;
+
     public InetAddress getLocalHost() throws java.rmi.RemoteException;
 
     public void initializeRoutingProtocol(ArrayList<RoutingTableKey> networks) throws java.rmi.RemoteException;
